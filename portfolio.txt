@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Main Introduction Section */
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .intro img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .intro h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+        }
+
+        .skills ul li {
+            display: inline-block;
+            background-color: #ddd;
+            color: #333;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 40px;
+            background-color: #eee;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            width: 30%;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact a:hover {
+            background-color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Stephen kamal pogula</h1>
+        <p>Web Developer | Programmer | Designer</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAe1BMVEUAAAD////GxsapqanP0dDd3d1wcXCYmZnu8O/q6ewzMzN8fHz09PT5+fnt7e3JycmwsLDl5eW8vLwMDAxVVVWOjo4bGxsuLi5BQUFKSkplZWU4ODiFhYWioqLPz89aWlonJyd2dnabm5u2trY8PD5naWgWFhYfHx5ISEjQ1MjcAAAElklEQVR4nO3Z63LiOBCGYTfgwMQHMBiGEPCQZEhy/1e48gmfpPaU2a2t3XqfP0kc2dFn5JbkeB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/Lft/u0O/I0u2Uf3wH62nmsBX4PgVb9kGgS/rL84BcGLfuopeNMbeN/pdaRFz1r8zs/vIr56iY3IRr+kaRFafxGKvOunRiJHvcVCnvQGfbNuQNO5tX5CGEX27t/NJRLbBxGY40v1zDcRmesXzx4LOBP5cDYtPEkcj/yNPODCctwfDZiJL7H+9x/7BDORy0j7tVw2Ix/yXMJIhg9bKtFIwKvI70hu6sUfCfjpi+xHmh9EvlORT63NXPzMMhC2sk70gEvTl63M1A48EPBnItZHp2MviefF+n2YS3KT8NA7+hXJKdYDJua6J4nUuzc94DGW6DTa3M+7eOlV3p65/PB+DO5BfmtWasAXEXNXVnLWLj45YBrKamSSMr5FrmYq1It5HnCZf9Id+fDUA24kK85W797UgLdIkufx1mUfzOeoFfM84NUMyM5BM/S+RgKGxRNiPsffSqOJAQMzvfcfGpuVBPmXvWMmL+UB85LSObiWracHfJOo+Jqod29awP3o9F56qvrwKVoxLwKaUtte0T2LpCMB11XlXapT4aSAF8lv7x81rtplWjEvAvaGcVmXtIBmAipXsOZeKMVuQsBwNro+avpQ/WkzpN3NyoBnWbWOxUVt1AI2H9xCu90TAkbj03tl3/Q5Us4pA+7C8nktvEmY71C0gMl9EWXWrO7tzLSAI2v8WmvUbZViXgY0Fbdp4pc7ECXgS/PM7iJlKpwyRD9GV9ilo1mm1d//6taQjirgsagrhZfqTCVg+3bMrGv10qQi84dFtN0H81A5n9sqoKlE9bP0UfVYCRi2xvxNuXvTpglTMxbqCrDQWUnO3cW8DmgmlWvxzSGsFrnugE+dBfzKvamZONHnC5mfIy1vxTKtdnQX8zqgV28e9vXNcAdcd8bQZrDQu5u6VEsjiUdeFvSeDN9ZzO8B68p/L5DOgGbl0O53Ws+JQ5MX22YzEbouWjCTYND+eemcCu8BzYI0740pSNUy1xmwv/ZLnHdv+nbJbAcj7dx9tUyrmcCOYn4PaCaTrPgT9fBzBkx6dfy9nDctHtjwHnxnl3ODIZm5inkTMM33Vc/NxsIVsDWjlF57w6Xx0DuZTJnyh0UluI+8niZgMcFfmorhCjgsKotyXzb02Eunmfudp2VaiBzFvBXwbIZa6wWHK2A4uNLZdfcefC+6Edc2IR6m2TZBOloBzYJ0Vs+GnjOgmQT7c9QhcgymR1/8mp3TwvZ4n1rLtNYxa91tBTTft7dijoD9t+tlv+xT4UKC63PH1dqudaHuxc2yLbGc0m9W9ddazNuj+WjW8mnrBNvHsrMVt6d+3akspG/kHwnbVe9pDuLYHwz/rzi0bI8uoXW5dgnbj3XY1NpdYruKdw5tL0CS0Nrz+XrWlakv4Rx2/VHq3J/9o/9o+z/9Fw8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB43F93sSnoSTnOwQAAAABJRU5ErkJggg==" alt="Profile Picture">
+        <h2>Hello, I'm Stephen kamal</h2>
+        <p>I am a passionate web developer with experience in building responsive websites and web applications. I love turning complex problems into simple, beautiful, and intuitive solutions.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>c</li>
+            <li>python</li>
+            
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bpttOIZlXbI6bP_wQOBxxQ2YAWW8CudvsQ&s" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Image classification of Rice leaf disease using Random forest algorithm.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://www.hydropoint.com/wp-content/uploads/What-is-smart-irrigation-1.jpeg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Smart irrigation system.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrdiRMDurLsFhHb4evePyvga2BSWrfu2FIVQ&s" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Fake news detection .</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: kamalpogula26@gmail.com</p>
+        <p>Phone: +91 90145522XX</p>
+        <a href="mailto:kamalpogula@gamil.com">Send me an email</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
